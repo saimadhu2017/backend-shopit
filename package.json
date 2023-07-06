@@ -1,0 +1,25 @@
+{
+  "name": "shopit_backend",
+  "version": "1.0.0",
+  "description": "backend server which provided API's to shopit database",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "author": "k sai madhu",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "tedious": "^16.1.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  }
+}
