@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const { VALID_FIRST_NAME, VALID_Last_NAME, VALID_MOBILE, VALID_COUNTRY, VALID_STRONG_PASSWORD } = require('./common');
+const { VALID_FIRST_NAME, VALID_Last_NAME, VALID_MOBILE, VALID_COUNTRY, VALID_STRONG_PASSWORD, RES_ERR_PASSWORD_NOT_MATCH } = require('./common');
 
 // rules..............................................................
 const rules = {
@@ -24,7 +24,7 @@ const userSchema = Joi.object({
 
 const userSignInSchema = Joi.object({
     mail: rules.mail,
-    password: rules.password.message(VALID_STRONG_PASSWORD),
+    password: rules.password.message(RES_ERR_PASSWORD_NOT_MATCH),
 })
 
 // validators.................................................................
