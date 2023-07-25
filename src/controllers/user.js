@@ -6,3 +6,7 @@ exports.getUserData = (req, res) => {
     req.paramAuth.salt = undefined
     onDone(req.paramAuth, req, res)
 }
+
+exports.checkUserData = (req, res) => {
+    onDone({}, req, res)
+}
