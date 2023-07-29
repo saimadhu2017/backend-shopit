@@ -12,3 +12,10 @@ exports.createBrand = (req, res) => {
     const sql = `insert into products.brands(name) values(${name ? `'${name}'` : null})`;
     executeApi(sql, req, res, onDone, onError)
 }
+
+exports.createProduct = (req, res) => {
+    const { name, in_store, retailer, category, brand, price, description } = req.body
+    const sql = `insert into products.items(name, in_store, retailer, category, brand, price, description)
+    values(${name ? `'${name}'` : null}, ${in_store}, ${retailer}, ${category}, ${brand}, ${price}, ${description ? `'${description}'` : null})`;
+    executeApi(sql, req, res, onDone, onError)
+}
