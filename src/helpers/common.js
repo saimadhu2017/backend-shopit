@@ -9,6 +9,7 @@ const common = {
     VALID_FIRST_NAME: 'Enter correct first name',
     VALID_Last_NAME: 'Enter correct last name',
     VALID_NAME: 'Enter correct name',
+    VALID_PRODUCT_NAME: 'Enter valid product name',
     VALID_MOBILE: 'Enter valid mobile number',
     VALID_COUNTRY: 'Enter valid country name',
     VALID_CITY: 'Enter valid city name',
