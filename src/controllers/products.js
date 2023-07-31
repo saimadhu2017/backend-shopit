@@ -15,9 +15,9 @@ exports.createBrand = (req, res) => {
 }
 
 exports.createProduct = (req, res) => {
-    const { name, in_store, retailer, category, brand, price, description } = req.body
-    const sql = `insert into products.items(name, in_store, retailer, category, brand, price, description)
-    values(${name ? `'${name}'` : null}, ${in_store}, ${retailer}, ${category}, ${brand}, ${price}, ${description ? `'${description}'` : null})`;
+    const { name, in_store, retailer, category, brand, list_price, sale_price, description } = req.body
+    const sql = `insert into products.items(name, in_store, retailer, category, brand, list_price, sale_price, description)
+    values(${name ? `'${name}'` : null}, ${in_store}, ${retailer}, ${category}, ${brand}, ${list_price},${sale_price >= 0 ? sale_price : null}, ${description ? `'${description}'` : null})`;
     executeApi(sql, req, res, onDone, onError)
 }
 
@@ -26,6 +26,6 @@ exports.getProductsByNameSearch = (req, res) => {
     if (!name) {
         return onError({ message: VALID_PRODUCT_NAME }, res)
     }
-    const sql = `select * from products.items where name LIKE '%${req.query.name}%'`
+    const sql = `select * from products.getProductsByName('${req.query.name}')`
     executeApi(sql, req, res, onDone, onError)
 }
