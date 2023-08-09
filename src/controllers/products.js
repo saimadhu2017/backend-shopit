@@ -26,6 +26,7 @@ exports.getProductsByNameSearch = (req, res) => {
     if (!name) {
         return onError({ message: VALID_PRODUCT_NAME }, res)
     }
-    const sql = `select * from products.getProductsByName('${req.query.name}')`
+    const { id: user_id } = req.paramAuth
+    const sql = `select * from products.getProductsByName('${name}', ${user_id})`
     executeApi(sql, req, res, onDone, onError)
 }

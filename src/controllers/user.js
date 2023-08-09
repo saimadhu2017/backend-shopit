@@ -22,7 +22,7 @@ exports.checkUserData = (req, res) => {
     onDone({}, req, res)
 }
 
-exports.addToCart = (req, res) => {
+exports.updateItemsQuantityInCart = (req, res) => {
     //Whatever quantity is passed in request body that will be updated in table and not added to current quantity in table of product
     const { product_id, quantity } = req.body
     const { id: user_id } = req.paramAuth
