@@ -6,6 +6,7 @@ const common = {
     RES_ERR_PASSWORD_NOT_MATCH: 'Please enter correct password',
     RES_SIGNOUT_MESSAGE: 'Sucessfully logged out',
     RES_ERR_INVALID_USER_ID: 'Invalid user ID',
+    RES_ERR_PRODUCT_ADD_TO_CART: 'Cannot add product to cart',
     VALID_FIRST_NAME: 'Enter correct first name',
     VALID_Last_NAME: 'Enter correct last name',
     VALID_NAME: 'Enter correct name',
