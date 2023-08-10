@@ -5,7 +5,7 @@ const common = {
     RES_ERR_MAIL_NOT_EXISTS: 'Sorry your account not found please signUp',
     RES_ERR_PASSWORD_NOT_MATCH: 'Please enter correct password',
     RES_SIGNOUT_MESSAGE: 'Sucessfully logged out',
-    RES_ERR_INVALID_USER_ID: 'Invalid user ID',
+    RES_ERR_INVALID_USER_ID: 'Session expired please sign in...',
     RES_ERR_PRODUCT_ADD_TO_CART: 'Cannot add product to cart',
     VALID_FIRST_NAME: 'Enter correct first name',
     VALID_Last_NAME: 'Enter correct last name',
