@@ -18,7 +18,7 @@ const onCreatingUser = (rows, req, res) => {
 }
 
 const onMailFound = (rows, req, res) => {
-    const { encry_password, salt, isMailPresent, id: userId } = rows.find((row) => row)
+    const { encry_password, salt, isMailPresent, id: userId, quantity } = rows.find((row) => row)
     if (isMailPresent) {
         const { password, mail } = req.query
         const { hashedPassword } = buildHasedPassword(password, salt)
@@ -28,7 +28,8 @@ const onMailFound = (rows, req, res) => {
             const finalData = {
                 jwtToken,
                 mail,
-                userId
+                userId,
+                userCartQuantity: quantity
             }
             return onDone(finalData, req, res)
         }

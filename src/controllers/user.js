@@ -19,7 +19,7 @@ exports.getUserData = (req, res) => {
 }
 
 exports.checkUserData = (req, res) => {
-    onDone({}, req, res)
+    onDone({ userCartQuantity: req?.paramAuth?.cart_quantity }, req, res)
 }
 
 exports.updateItemsQuantityInCart = (req, res) => {
